@@ -6,7 +6,7 @@ var collection = require('../config/collections')
 /* GET home page. We also give a message if user session exisit*/
 router.get('/', async (req, res, next) => {
 
-      res.render('home/add-page', { });
+      res.render('home/list-page', { });
     
   })
 
