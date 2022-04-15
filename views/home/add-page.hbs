@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Dashboard</title>
+    <title>Add Page</title>
 
     <!-- CSS sstyle sheet -->
     <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" media="all" />
@@ -16,13 +16,14 @@
 
 <body>
     <header style="padding-bottom: 55px;">
-        <nav class="navbar navbar-expand-lg navbar-light bg-info fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light  fixed-top" style="background-color:#002387;">
         <a href="/"><button type="button" class="btn btn-light">Add Page</button></a> 
 
             <div class=" pl-2">
                 <ul class="navbar-nav mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a href="/list-page"> <button type="button" class="btn btn-light">List Page</button></a>
+                        
+                        <a href="/list-page"><button type="button" class="btn btn-outline-light">List Page</button></a>
                     </li>
                 </ul>
             </div>
@@ -44,14 +45,14 @@
                         <form action="/add-item" method="POST" id="">
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" name="item" placeholder="Add your text"
-                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                aria-label="Recipient's username" aria-describedby="basic-addon2" required>
                             <div class="input-group-append">
     
                             </div>
                         </div>
                    
                         <center>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn" style="background-color: #002387; color: #fff;">Submit</button>
                         </center>
                     </form>
                     </div>

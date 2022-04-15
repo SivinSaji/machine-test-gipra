@@ -1,4 +1,4 @@
-____TECHNOLOGIES USED____
+____TECHNOLOGIES USED____<br/>
 BACKEND:-<br/>
  Node.js - Express
 
@@ -19,7 +19,7 @@ Step 2: Clone the project from GitHub<br/>
 $ git clone https://github.com/SivinSaji/machine-test-gipra.git<br/>
 
 Step 3: Install all node modules<br/>
-$ npm istall <br/>
+$ npm install <br/>
 
 Step 4: To start server <br/>
 $ nodemon bin/www<br/>
