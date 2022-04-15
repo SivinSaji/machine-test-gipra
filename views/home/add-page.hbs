@@ -17,7 +17,7 @@
 <body>
     <header style="padding-bottom: 55px;">
         <nav class="navbar navbar-expand-lg navbar-light bg-info fixed-top">
-            <a href="/"><button type="button" class="btn btn-light">Add Page</button></a>
+        <a href="/"><button type="button" class="btn btn-light">Add Page</button></a> 
 
             <div class=" pl-2">
                 <ul class="navbar-nav mt-2 mt-lg-0">
@@ -28,32 +28,32 @@
             </div>
         </nav>
     </header>
-
+  
     <section style="margin-top: 10%;">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     {{#if status}}
                     <div class="alert alert-success" role="alert">
-                        <span class="font-weight-bold">Success!</span> new value added to list.
+                       <span class="font-weight-bold">Success!</span> new value added to.
                     </div>
                     {{/if}}
                     <div class="p-3 pb-4 border border-secondary rounded">
                         <h5>Enter item to list</h5>
                         <hr>
                         <form action="/add-item" method="POST" id="">
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" name="item" placeholder="Add your text"
-                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                <div class="input-group-append">
-
-                                </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="item" placeholder="Add your text"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+    
                             </div>
-
-                            <center>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </center>
-                        </form>
+                        </div>
+                   
+                        <center>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </center>
+                    </form>
                     </div>
                 </div>
             </div>
