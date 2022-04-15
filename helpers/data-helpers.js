@@ -14,7 +14,6 @@ module.exports = {
             db.get().collection(collection.ITEM_COLLECTION).insertOne(itemData).then((data) => {
                 resolve()
             })
-
         })
     },
     /*Here we get all items in the list*/

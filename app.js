@@ -3,43 +3,37 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var hbs=require('express-handlebars');
+var hbs = require('express-handlebars');
 var app = express();
-var hbs = require('hbs');
-
-
 var indexRouter = require('./routes/index');
-
-
-
-var db=require('./config/connection')
+var db = require('./config/connection')
 
 
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-
-
+//Here we set layout and partials
+app.engine('hbs', hbs.engine({ extname: 'hbs', defautLayout: 'layout', layoutsDir: __dirname + '/views/layout', partialsDir: __dirname + '/views/partials/' }))
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false })); 
+app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-db.connect((err)=>{
-  if(err) console.log('Connection Error'+err)
+db.connect((err) => {
+  if (err) console.log('Connection Error' + err)
   else console.log('Database Connected to port 27017')
 })
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
